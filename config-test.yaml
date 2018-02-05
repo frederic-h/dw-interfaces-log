@@ -1,0 +1,4 @@
+hk2BinderClass: service.di.MockBinder
+
+logging:
+  level: INFO

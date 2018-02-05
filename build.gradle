@@ -1,0 +1,30 @@
+plugins {
+    id 'java'
+    id 'application'
+}
+
+repositories {
+    jcenter()
+}
+
+// versions
+def dropwizardVersion = '1.2.2'
+
+dependencies {
+    compile "io.dropwizard:dropwizard-core:$dropwizardVersion"
+
+    // TEST
+    testCompile "io.dropwizard:dropwizard-testing:$dropwizardVersion"
+}
+
+sourceSets {
+    main {
+        java.srcDirs += 'src/main/generated/java'
+    }
+}
+
+mainClassName = 'service.App'
+
+run {
+    args = ["server", "config.yaml"]
+}

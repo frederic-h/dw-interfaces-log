@@ -1,0 +1,4 @@
+hk2BinderClass: service.di.Binder
+
+logging:
+  level: INFO
